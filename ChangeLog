@@ -1,3 +1,15 @@
+2017-06-02  DoccY <alban.mancheron@lirmm.fr>
+
+	* README.md:
+	Ajout de la description du projet et des liens vers des ressources.
+	
+	
+2017-06-02  DoccY <alban.mancheron@lirmm.fr>
+
+	* .gitignore:
+	Configuration locale du dépôt git (fichiers backup à ignorer).
+	
+	
 2017-06-01  DoccY <alban.mancheron@lirmm.fr>
 
 	* Initialisation du projet
