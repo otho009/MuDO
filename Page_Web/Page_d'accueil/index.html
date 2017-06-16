@@ -1,0 +1,139 @@
+ <!DOCTYPE html>
+<html lang="en"><head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <meta charset="utf-8">
+        <title>Holo Theme</title>
+        <meta name="generator" content="Bootply">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="assets/css/bootstrap.css" rel="stylesheet">
+        
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    
+    <link href="assets/css/holo.css" rel="stylesheet">
+    </head>
+    
+
+<!-- HTML code from Bootply.com editor -->
+
+<body>
+
+  <div class="page-container">
+
+   <!-- top navbar -->
+   <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#">Logo</a>
+      </div>
+      <div class="collapse navbar-collapse" id="UpNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Accueil</a></li>
+          <li><a href="#">Paramètres</a></li>
+          <li><a href="#">Galerie</a></li>
+          </ul>
+         
+      </div>
+   </div>
+    </nav>
+
+    
+
+    <!-- main area -->
+    <div class="container">  
+
+      <div class="raw">
+        <div class="col-sm-12 text-left"> 
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="embed-responsive embed-responsive-16by9">
+  <iframe  class="embed-responsive-item col-sm-12"  src="video.mp4" allowfullscreen></iframe>
+</div>
+              
+              <div class='panel-footer'>
+                <div class="btn-group pull-right btn-toggle">
+                <button class="btn btn-default">ON</button>
+                <button class="btn btn-primary active">OFF</button>
+              </div>
+              <div class="btn-group pull-left ">
+                <button class="btn btn-md btn-primary">Ouvrir</button>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="raw">
+      <div class="col-sm-8">
+      <div class="panel panel-default">
+       <div class="panel-heading"><a href="#" class="pull-right">Options avancées</a> <h4>Options</h4></div>
+        <div class="panel-body">
+          <ul class="list-group">
+               <li class="list-group-item">
+                <button class="btn btn-xs btn-primary pull-right">Screen</button>
+             Prendre un screen
+           </li>
+           <li class="list-group-item">
+            <span href="#" class="btn-group btn-toggle pull-right">
+             <button class="btn btn-xs btn-default">On</button>
+             <button class="btn btn-xs btn-primary active">Off</button>
+           </span> Activer/Désactiver le micro</li>
+           <li class="list-group-item">
+                <button class="btn btn-xs btn-danger pull-right">Redémarrer</button>
+                Redémarrer le système
+           </li>
+         </ul>
+       </div> 
+
+     </div>
+   </div> <!-- col-sm-->
+  </div> <!--raw-->
+
+  
+  </div><!--page-container-->
+
+  
+
+<div id="footer"><!--footer-->
+  <div class="container">
+   <div class="row">
+    <ul class="list-unstyled">
+      <li class="col-sm-4 col-xs-6">
+        <a href="#">About</a>
+      </li>
+    </ul>
+  </div><!--/row-->
+
+</div><!--/container-->
+</div><!--/footer-->
+</div>
+
+<div id="push"></div>
+
+<script type="text/javascript" async="" src="assets/js/quant.js"></script>
+</script><script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+  $('[data-toggle=offcanvas]').click(function() {
+    $('.row-offcanvas').toggleClass('active');
+  });
+
+  $('.btn-toggle').click(function() {
+    $(this).find('.btn').toggleClass('active').toggleClass('btn-default').toggleClass('btn-primary');
+  });
+});
+
+</script>
+
+
+</body></html>
