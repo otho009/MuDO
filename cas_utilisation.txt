@@ -1,0 +1,111 @@
+Cas 1: On sonne
+
+Lorsque ça sonne, sur le serveur éternet va envoyer aux ordinateur actifs par éternet et par internet un message du navigateur contenant un lien à la page pour voir le sonneur. (évidament, cela marche seulement si l'utilisateur est connectée)
+La caméra se met en marche, suivi d'une photo ajoutée, maintenant, le boitier attends la réponse:
+	Le bouton "OUVRIR" pour ainsi envoyer le signal n°3 qui permet d'ouvrir la porte,
+	le bouton "REFUS" pour refuser, c'est à dire ne rien faire et finir immédiatement ce cas,
+	ou après un temps écoulée, ce cas se cesse.
+
+Cas 2: On appuie sur la sonnerie
+
+Il faut maintenir l'activation du bouton tactile "SONNER" pour ainsi accumuler des 'points d'attente'. Lacher va liberer ces derniers.
+Lorsque ces 'points' atteigne le seuil vrai, on envoie le signal n°1 qui sonne. Ou ces premiers peuvent aussi retourner en dessous du seuil minimum, ce qui entraine l'arrêt du cas (par exemple une feuille qui touche accidentellement le bouton)
+
+Cas 3: J'ouvre la port
+
+Ceci permet de déverioullier la porte automatiquement penfant un cours instant.
+
+Cas 4: Je refuse
+
+Ceci permet d'arrêter immédiatement le cas n°1
+
+Cas 5: je veux voir
+
+Le bouton "VOIR" va ainsi pour un court instant montrer ce qu'il y a dehors
+
+Cas 6: Je change de sonnerie
+
+Il faut aller sur la page internet/eternet, ouvrir la page des configurations, Un choix bouton radio se montre:
+	Soit la sonnerie à default (On ne peut pas la modifier)
+	Soit la sonnerie personalisable, suivi du nom du fichier audio, avec un bouton "Parcourir" à coté.
+Il y a un bouton "enrengistrer" pour valider ces paramètres
+
+Cas 7: Panne d'éléctricité
+
+Le système avertit sur la page de paramètre si il y a une coupure de courant, envoyant une alerte sur internet(si connecté) / eternet(tout le monde, si c'est juste le boitier)
+Dans les paramètres, il y a un choix bouton:
+	Soit continuer jusqu'à presque plus d'énergie dans la pile de secours qui fait que le système s'arrête correctement
+	Soit s'arrêter correctement
+	Soit le choix n°1 pendant n minutes puis le choix n°2
+	Avec bouton valider
+
+Cas 8: Erreur, pas de pile/pile presque vide
+ 
+Le système s'arrête en cas où cela arrive pour des raisons de sécurité
+Si le problème est réglé, le système s'allumera automatiquement
+
+Cas 9: Erreur, communication boitier I/E coupé
+
+Le système continue de marcher, mais une alerte sera envoyé
+
+Cas 10: Voir photos
+
+Il faut aller sur la page internet/eternet, ouvrir la page historique des photos:
+Il y a un bas un choix de nbre de photos maximum à retenir avec un bouton appliquer, si appuyé, une demande dira "Vous êtes sure?" "Oui" "Non" (Si limite réduite et des photos en dehors de la mimite, effacer ces derniers).
+On peut voir une liste d'images prises avec la date à coté.
+
+Cas 11: Voir état paramètres
+
+Sur Internet/eternet, c'est simplement des retours d'état des apareilles, plus la sonnerie à changer, et un bouton vers le lien page historique des photos. C'est la page principale après connection. Il y a donc un bouton déconnecter.
+Il y a aussi un bouton lien page MDP (seulement eternet?). [Il y a aussi un bouton "A jour?"]
+
+Cas 12: Se connecter
+
+Version eternet:
+
+Champ MDP
+Bouton "j'ai oublié mon MDP :("
+
+Version internet:
+
+Champ nom-hôte
+Champ MDP (en "......." )?
+[Pas de bouton "j'ai oublié mon MDP :(" pour des raisons de sécurité?]
+
+Cas 13: Page MDP
+
+Il y a le champ adresse mail en cas d'oubli de MDP.
+Le champ MDP.
+Le champ Nouveau MDP
+Le champ confirmer MDP (en "......." ) avec à coté le bouton valider
+
+[Cas 14: Mise à jour
+
+Le système contient la variable de version système, il recherche automatiquement une mise à jour tous les 24 h. (Il y a aussi le bouton "A jour?")
+{Arg c très difficile, à faire le plus tard}]
+
+============================================
+
+Fonctionnalités: (Interface graphique)
+
+-Options (configure: camera, ...) Changer le nom, ... config mail, IP + nom-hôte du portier
+
+-Activer la caméra (auto si qqn sonne)
+
+-Redémarer
+
+-Config matériel (Visualisation niveau batterie, ...): Consulter l'état du portier
+
+-Niveau de verbosité (plusieurs niveaux)
+
+-Changer mélodie
+
+(-Récupérer les fichiers log (l'enrengistrer, vider, choisir quoi loguer))
+
+-Enrengister les n° d'appel (remplaser freepbx)
+
+-Un lien vers la page de configutration freepbx
+
+-Un mail auto (un mail de secours)
+
+-La gestion de mise à jour
