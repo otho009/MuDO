@@ -45,3 +45,62 @@ Author: DoccY <alban.mancheron@lirmm.fr>
 Date:   Thu Jun 1 15:57:09 2017 +0200
 
     Update logs...
+commit efbd08bd047b444e198861b5542fdf6437513203
+Author: Othmane FARAJALLAH <Othfarajallah@hotmail.fr>
+Date:   Mon Jun 19 13:31:24 2017 +0200
+
+    Ajout du pannel infos utilisation
+
+commit 98bc16f53ed8de6eeea667a531c619165da87421
+Author: Othmane FARAJALLAH <Othfarajallah@hotmail.fr>
+Date:   Fri Jun 16 04:55:37 2017 +0200
+
+    Updated the ChangeLog file
+
+commit 05e08800325227421cc65503fd3f2f6c359442da
+Author: Othmane FARAJALLAH <Othfarajallah@hotmail.fr>
+Date:   Fri Jun 16 04:37:43 2017 +0200
+
+    Ajout de la page d'accueil et de la page d'enregistrement
+
+commit a5008be6ed87ce404b7db35d2a81e04babca29fd
+Author: jeremie-dautheribes <jeremie.dautheribes@etu.umontpellier.fr>
+Date:   Tue Jun 13 15:36:00 2017 +0200
+
+    Ajout des noms et prénoms
+
+commit 49e81daa781188b4c56fb7ce7d3c978006e1868b
+Author: DoccY <alban.mancheron@lirmm.fr>
+Date:   Fri Jun 2 10:15:18 2017 +0200
+
+    Update logs...
+
+commit caf50eaa9f0eefc2461c509eeaf26916402631e7
+Author: DoccY <alban.mancheron@lirmm.fr>
+Date:   Fri Jun 2 10:14:54 2017 +0200
+
+    Ajout de la description du projet et des liens vers des ressources.
+
+commit 1325e52b09753ffeb2d92e3dde0a1f562dd7cbdc
+Author: DoccY <alban.mancheron@lirmm.fr>
+Date:   Fri Jun 2 10:14:08 2017 +0200
+
+    Configuration locale du dépôt git (fichiers backup à ignorer).
+
+commit 79af6e02917b67d230c467470764c6af440bdd4d
+Author: DoccY <alban.mancheron@lirmm.fr>
+Date:   Thu Jun 1 15:57:47 2017 +0200
+
+    Update logs...
+
+commit bc7c97baec49766f9d3aa08cf45e8dc3e32d9924
+Author: DoccY <alban.mancheron@lirmm.fr>
+Date:   Thu Jun 1 15:57:35 2017 +0200
+
+    Initialisation du projet
+
+commit 9662459cc4cb5768dd275d9d5d6f6eb214a39e4a
+Author: DoccY <alban.mancheron@lirmm.fr>
+Date:   Thu Jun 1 15:57:09 2017 +0200
+
+    Update logs...
