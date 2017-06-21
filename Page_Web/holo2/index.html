@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Holo Theme</title>
+        <meta name="generator" content="Bootply">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+    <link href="assets/css/holo.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-slider.css" rel="stylesheet">
+
+    </head>
+
+
+
+<body>
+
+  <div class="page-container">
+
+   <!-- top navbar -->
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Logo</a>
+      </div>
+      <div class="collapse navbar-collapse" id="UpNavbar">
+        <ul class="nav navbar-nav">
+          <li> <a href="#">Accueil</a></li>
+          <li class="active"><a href="#">Paramètres</a></li>
+          <li><a href="#">Galerie</a></li>
+          </ul>
+
+      </div>
+   </div>
+    </nav>
+
+
+
+    <!-- main area -->
+    <div class="container">
+
+      <div class="panel-group" id="accordion">
+    <div class="panel panel-default" id="panel1">
+        <div class="panel-heading">
+             <h4 class="panel-title"> <a data-toggle="collapse" data-target="#collapseOne" href="#collapseOne"> Personnalisation </a></h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="panel-body">
+              <form class="form-horizontal">
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Nom de l'appareil</label>
+                  <div class="col-sm-8">
+                    <input class="form-control" id="nomAp" type="text" value="" >
+                 </div>
+                 <div class="col-sm-2">
+                 <!--          btnNomAp             -->
+                   <button type="button" class=" btn btn-primary" id="btnNomAp" onclick="enrNom()" > Enregistrer</button>
+                 </div>
+                </div>
+
+               <div class="form-group">
+                  <label class="col-sm-2 control-label">Message d'accueil</label>
+                  <div class="col-sm-8">
+                    <input class="form-control" id="messAcc" type="text" value="" >
+                  </div>
+                   <div class="col-sm-2">
+                      <!--          btnMessAcc             -->
+                      <button type="button" class=" btn btn-default" id="btnMessAcc" onclick="enrMess()" > Enregistrer</button>
+                    </div>
+               </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Musique d'accueil</label>
+                   <div class="col-sm-8">
+                      <!--          btnMusAcc          -->
+                     <label class="btn btn-default btn-file btn-block"> Choisir fichier<input type="file" style="display: none;"></label>
+                  </div>
+               </div>
+
+               <div class="form-group">
+                  <label class="col-sm-2 control-label">Adresse mail </label>
+                  <div class="col-sm-4">
+                    <input class="form-control"  type="email" id="nomAp" type="text" value="" >
+                  </div>
+                   <div class="col-sm-6">
+                     <div class="btn-group">
+                        <button type="button" class=" btn btn-sm btn-default" id="btnMessAcc"> Tester</button>
+                        <button type="button" class=" btn btn-sm btn-default" id="btnMessAcc" onclick="enrMess()" > Enregistrer</button>
+                     </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Numéro de téléphone </label>
+                  <div class="col-sm-4">
+                    <input class="form-control"  type="tel" id="numTel" type="text" value="" >
+                  </div>
+                   <div class="col-sm-2">
+                     <button type="button" class=" btn btn-sm btn-default" id="btnMessAcc" onclick="enrMess()" > Enregistrer</button>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-2 control-label">Niveau verbosité </label>
+                  <div class="col-sm-4">
+                    <select class="form-control" id="sel1">
+                      <option>Niveau 1 </option>
+                      <option>Niveau 2</option>
+                      <option>Niveau 3</option>
+                      <option>Niveau 4</option>
+                    </select>
+                  </div>
+
+                </div>
+              </form>
+
+            </div> <!-- panel-body -->
+
+
+            </div>
+            </div>
+
+    <div class="panel panel-default" id="panel2">
+        <div class="panel-heading">
+          <h4 class="panel-title"> <a data-toggle="collapse" data-target="#collapseTwo" href="#collapseTwo" class="collapsed">
+              Configuration du materiel  </a>
+          </h4>
+
+        </div>
+
+        <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
+              <form class="form-horizontal">
+
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Luminosité </label>
+                  <div class="col-sm-9">
+                    <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Volume du haut-parleur </label>
+                  <div class="col-sm-9">
+                    <input id="ex2" data-slider-id='ex2Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+                  </div>
+                </div>
+
+
+                <div class="form-group">
+                  <label class="col-sm-3 control-label">Sensiblité microphone </label>
+                  <div class="col-sm-9">
+                    <input id="ex3" data-slider-id='ex3Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+                  </div>
+                </div>
+                <button type="button" class=" btn btn-primary pull-right" id="btnConfMat" onclick="enrConfMat()" > Enregistrer</button>
+
+              </form>
+
+
+            </div>
+        </div>
+    </div>
+
+    
+</div> <!--panel-group-->
+  </div><!--page-container-->
+
+
+
+
+<div id="push"></div>
+
+<script type="text/javascript" async="" src="assets/js/quant.js"></script>
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap-slider.js"></script>
+
+
+<script type="text/javascript">
+function enrNom(){
+  document.getElementById("nomAp").disabled=true;
+}
+
+$(document).ready(function() {
+  $('[data-toggle=offcanvas]').click(function() {
+    $('.row-offcanvas').toggleClass('active');
+  });
+
+  $('.btn-toggle').click(function() {
+    $(this).find('.btn').toggleClass('active').toggleClass('btn-default').toggleClass('btn-primary');
+  });
+});
+
+/* Affichage de la valeur quand on bouge le curseur  */
+$("#ex1,#ex2,#ex3" ).slider({
+	formatter: function(value) {
+		return 'Valeur actuelle: ' + value;
+	}
+});
+
+/*
+// Pour afficher tout le temps la valeur
+$("#ex1").slider({
+	tooltip: 'always'
+});
+*/
+
+</script>
+
+
+</body></html>
