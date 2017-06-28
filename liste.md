@@ -1,0 +1,9 @@
+- Faire le streaming                                                  (Othman)
+- Installer linphone sur raspberry pi et le configurer                (Wissem)
+- Configurer le button piezo pour appeller                            (Thomas)  FAIT
+- Creation de fichier json pour admin et mot-de-pass                  (Jeremie)
+- Script pour le reboot et le screen a partir du site                 (Thomas)  FAIT
+- Script pour la luminosite, le volume et le microphone               (Thomas)
+- Recuperer dans un json les parametres du site                       (Jeremie)
+- Configurer le nom de l'apareil (dans le site) comme nom de domaine  (Jeremie)
+- Script pour le niveau de batterie et de memoire                     
