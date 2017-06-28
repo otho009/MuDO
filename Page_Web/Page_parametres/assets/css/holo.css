@@ -183,7 +183,10 @@ a {
   border-radius:0;
 }
 
-
+#UpNavbar li a:hover {
+  background-color:#222222;
+  color:#1E7FCB    ;
+}
 
 h3,h4,h5,.panel {
    color:#555555;

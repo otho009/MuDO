@@ -1,5 +1,15 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
 
+.panel-heading a:after {
+    font-family:'Glyphicons Halflings';
+    content:"\e114";
+    float: right;
+    color: grey;
+}
+.panel-heading a.collapsed:after {
+    content:"\e080";
+}
+
 html,body {
   height: 100%;
   font-family: 'Droid Sans Mono', sans-serif;
@@ -38,9 +48,9 @@ hr {
 }
 
 body {
-  padding-top: 51px; 
+  padding-top: 51px;
   background: #1E1E1E;
-  color: #f9f9f9;
+  color: white;
 }
 a {
   color:#bcbcbc;
@@ -79,11 +89,7 @@ a {
 }
 #sidebar li a:hover {
   background-color:#222222;
-  color:#1E7FCB    ;
-}
-#UpNavbar li a:hover {
-  background-color:#222222;
-  color:#1E7FCB    ;
+  color:#ffffff;
 }
 
 /* collapsed sidebar styles */
@@ -137,7 +143,7 @@ a {
   #sidebar .nav>li>a:hover, #sidebar .nav>li>a:focus {
     text-decoration: none;
     background: linear-gradient(#373737, #323232);
-    color: #fff;  
+    color: #fff;
   }
   #sidebar .nav .caret {
     border-top-color: #fff;
@@ -176,12 +182,19 @@ a {
 .nav-tabs>li>a {
   border-radius:0;
 }
-     
-      
-      
+
+
 h3,h4,h5,.panel {
    color:#555555;
 }
 .panel hr {
    border-color:#efefef;
+}
+#ex1Slider .slider-selection, #ex2Slider .slider-selection, #ex3Slider .slider-selection {
+	background: #BABABA;
+}
+
+#UpNavbar li a:hover {
+  background-color:#222222;
+  color:#1E7FCB    ;
 }
