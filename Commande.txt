@@ -1,6 +1,6 @@
 Play lit les fichiers musicaux. Par exemple :
 
-	pour lire tous les fichiers mp3 d'un répertoire à la suite :
+	pour lire tous les fichiers mp3 d'un rÃ©pertoire Ã  la suite :
 		play *.mp3
 
 	pour lire un fichier "2 fois plus fort" :
@@ -9,19 +9,19 @@ Play lit les fichiers musicaux. Par exemple :
 
 Sox permet la manipulation des fichiers. Par exemple :
 
-	pour créer un ogg à partir d'un mp3 :
+	pour crÃ©er un ogg Ã  partir d'un mp3 :
 		sox fichier.mp3 fichier.ogg
 
-	pour concaténer plusieurs fichiers en un seul :
+	pour concatÃ©ner plusieurs fichiers en un seul :
 		sox fichier1.ogg fichier2.ogg fichier_final.ogg
 
 	pour augmenter de 10db
 		sox entree.wav sortie.wav vol 10db 
 
-	pour augmenter les basses tout en évitant la saturation :
+	pour augmenter les basses tout en Ã©vitant la saturation :
 		sox entree.ogg sortie.ogg vol -6dB bass +6
 
-	pour imprimer une analyse du fichier son (amplitude, volume…):
+	pour imprimer une analyse du fichier son (amplitude, volumeâ€¦):
 		sox entree.ogg -n stat 
 
 	pour imprimer une analyse du fichier son (dB, channel..)
