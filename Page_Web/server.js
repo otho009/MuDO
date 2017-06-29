@@ -1,9 +1,6 @@
 var express = require('express');
 var app = express();
-var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
-app.use(express.static('public'));
+var firstLog = true; // Variable pour le login
 
 app.set('view engine', 'ejs');
 // Permet de fixer le dossier public comme étant le dossier pour les fichiers statics
