@@ -1,3 +1,5 @@
+Sox : Partie software
+
 Play lit les fichiers musicaux. Par exemple :
 
 	pour lire tous les fichiers mp3 d'un répertoire à la suite :
