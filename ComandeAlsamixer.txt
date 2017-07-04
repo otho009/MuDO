@@ -1,0 +1,31 @@
+Alsamixer : pour des réglages hardware
+
+Run it without parameters to get an overview about your devices.
+
+amixer
+
+Then use the set command to set the volumn. For example to set the master channel to 50%:
+
+amixer set Master 50%
+Note the "%" sign, without it it will treat the value as 0 - 65536 level.
+
+To mute :
+
+amixer -D pulse sset Master mute
+
+To unmute:
+
+amixer -D pulse sset Master unmute
+
+To turn volume up 5%:
+
+amixer -D pulse sset Master 5%+
+
+To turn volume down 5%:
+
+amixer -D pulse sset Master 5%-
+
+if the user has muted the device you have to 'unmute' it. otherwise setting the percentage will work but the sound is still off
+
+amixer set 'Master' 100% unmute
+/usr/bin/amixer set 'PCM' 100% unmute

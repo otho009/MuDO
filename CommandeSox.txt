@@ -1,0 +1,49 @@
+Sox : Partie software
+
+Play lit les fichiers musicaux. Par exemple :
+
+	pour lire tous les fichiers mp3 d'un répertoire à la suite :
+		play *.mp3
+
+	pour lire un fichier "2 fois plus fort" :
+		play fichier.mp3 vol 2
+
+
+Sox permet la manipulation des fichiers. Par exemple :
+
+	pour créer un ogg à partir d'un mp3 :
+		sox fichier.mp3 fichier.ogg
+
+	pour concaténer plusieurs fichiers en un seul :
+		sox fichier1.ogg fichier2.ogg fichier_final.ogg
+
+	pour augmenter de 10db
+		sox entree.wav sortie.wav vol 10db 
+
+	pour augmenter les basses tout en évitant la saturation :
+		sox entree.ogg sortie.ogg vol -6dB bass +6
+
+	pour imprimer une analyse du fichier son (amplitude, volume…):
+		sox entree.ogg -n stat 
+
+	pour imprimer une analyse du fichier son (dB, channel..)
+		sox entree.ogg -n stats
+
+
+Using Sox to Change Volume
+
+The general option -v is used to change the volume. The argument to this option is used as a multiplier:
+
+sox -v 2.0 foo.wav bar.wav
+places in bar.wav a copy of foo.wav with the volume doubled.
+Counterintuitively, this is an input option, which is why it precedes the name of the input file.
+
+You can use this together with the stat effect to maximize the volume of a file. The command sox foo.wav -n stat -v prints the multiplier that will maximize the volume without clipping. On Unix systems, the multiplier is written on the stderr output. In a csh script you might do this:
+
+sox foo.wav -n stat -v >& vc
+sox -v `cat vc` foo.wav foo-maxed.wav
+In a bash script you might do this:
+
+sox foo.wav -n stat -v 2> vc
+sox -v `cat vc` foo.wav foo-maxed.wav
+The -n flag suppresses the normal output. In this case, we want the multiplier and are not interested in a copy of the audio file. (The -n flag can also be used in place of an input file. In that case, sox behaves as if it had been given an input file consisting of an infinite amount of silence.)
