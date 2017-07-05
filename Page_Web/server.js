@@ -15,9 +15,6 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
     app.get('/', function(req, res) {
         res.render('enregistrement.ejs');
     });
-
-
-
    // Page d'acceuil
     app.get('/accueil', function(req, res) {
         res.render('index.ejs');
@@ -27,19 +24,18 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
         res.render('parametres.ejs');
     });
 
+
+    // personnalisation
     app.post('/parametres', function(req, res){
        console.log(req.body);
        res.send("recieved your request!");
     });
-    // configuration du materiel
+    // configuration du matériel
     app.post('/parametres2', function(req, res){
        console.log(req.body);
        res.send("recieved your request 2!");
     });
-    // app.post('/', function(req, res){
-    //    console.log(req.body);
-    //    res.send("recieved your request!");
-    // });
+
 
 
 app.listen(8080);
