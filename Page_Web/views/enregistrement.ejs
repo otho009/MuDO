@@ -20,13 +20,13 @@
 
     <div class="container">
 
-      <form class="form-signin">
+      <form class="form-signin" method="post" action="/">
         <h2 class="form-signin-heading">Enregistrez-vous</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
         <div>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Identifiant" required autofocus>
+        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Identifiant" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe">
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Mot de passe">
         <button class="btn btn-lg btn-primary btn-block" type="submit">S'enregistrer</button>
       </form>
 

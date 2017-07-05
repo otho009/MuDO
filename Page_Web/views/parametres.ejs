@@ -31,9 +31,8 @@
       </div>
       <div class="collapse navbar-collapse" id="UpNavbar">
         <ul class="nav navbar-nav">
-          <li> <a href="http://localhost:8080/">Accueil</a></li>
+          <li> <a href="http://localhost:8080/accueil">Accueil</a></li>
           <li class="active"><a href="#">Paramètres</a></li>
-          <li><a href="#">Galerie</a></li>
           </ul>
 
       </div>
@@ -52,28 +51,19 @@
         </div>
         <div id="collapseOne" class="panel-collapse collapse in">
             <div class="panel-body">
-              <form class="form-horizontal" method="post">
-
+              <form class="form-horizontal" method="post" action="/parametres">
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Nom de l'appareil</label>
                   <div class="col-sm-8">
-                    <input class="form-control" id="nomAp" type="text" value="hahaha" >
-                 </div>
-                 <div class="col-sm-2">
-                 <!--          btnNomAp             -->
-                   <button type="submit" class=" btn btn-primary" id="btnNomAp" onclick="enrNom()" > Enregistrer</button>
+                    <input class="form-control" name="nomAp" id="nomAp" type="text" value="MUdo"  maxlength="20">
                  </div>
                 </div>
 
                <div class="form-group">
                   <label class="col-sm-2 control-label">Message d'accueil</label>
                   <div class="col-sm-8">
-                    <input class="form-control" id="messAcc" type="text" value="" >
+                    <input class="form-control" name="messAcc" id="messAcc" type="text" value="" >
                   </div>
-                   <div class="col-sm-2">
-                      <!--          btnMessAcc             -->
-                      <button type="button" class=" btn btn-primary" id="btnMessAcc" onclick="enrMess()" > Enregistrer</button>
-                    </div>
                </div>
 
                 <div class="form-group">
@@ -86,31 +76,28 @@
 
                <div class="form-group">
                   <label class="col-sm-2 control-label">Adresse mail </label>
-                  <div class="col-sm-4">
-                    <input class="form-control"  type="email" id="nomAp" type="text" value="" >
+                  <div class="col-sm-6">
+                    <input class="form-control"  type="email" name="adMail" id="adMail" type="text" value="" >
                   </div>
-                   <div class="col-sm-6">
+                   <div class="col-sm-4">
                      <div class="btn-group">
                         <button type="button" class=" btn btn-sm btn-primary" id="btnMessAcc"> Tester</button>
-                        <button type="button" class=" btn btn-sm btn-primary" id="btnMessAcc" onclick="enrMess()" > Enregistrer</button>
                      </div>
                     </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Numéro de téléphone </label>
-                  <div class="col-sm-4">
-                    <input class="form-control"  type="tel" id="numTel" type="text" value="" >
+                  <div class="col-sm-6">
+                    <input class="form-control"  type="tel" nom="numTel" id="numTel" type="text" value="" pattern="[0-9]"  maxlength="10" >
                   </div>
-                   <div class="col-sm-2">
-                     <button type="button" class=" btn btn-sm btn-primary" id="btnMessAcc" onclick="enrMess()" > Enregistrer</button>
-                  </div>
+
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 control-label">Niveau verbosité </label>
                   <div class="col-sm-4">
-                    <select class="form-control" id="sel1">
+                    <select class="form-control" name="verbo"  id="sel1">
                       <option>Niveau 1 </option>
                       <option>Niveau 2</option>
                       <option>Niveau 3</option>
@@ -119,6 +106,7 @@
                   </div>
 
                 </div>
+                 <button type="submit" class=" btn-lg btn-primary pull-right" id="btnEnr1"  > Enregistrer</button>
               </form>
 
             </div> <!-- panel-body -->
@@ -137,19 +125,19 @@
 
         <div id="collapseTwo" class="panel-collapse collapse">
             <div class="panel-body">
-              <form class="form-horizontal">
+              <form class="form-horizontal" method="post" action="/parametres2">
 
                 <div class="form-group">
                   <label class="col-sm-3 control-label">Luminosité </label>
                   <div class="col-sm-9">
-                    <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+                    <input id="ex1" name="luminosite" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <label class="col-sm-3 control-label">Volume du haut-parleur </label>
                   <div class="col-sm-9">
-                    <input id="ex2" data-slider-id='ex2Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+                    <input id="ex2" name="volume" data-slider-id='ex2Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
                   </div>
                 </div>
 
@@ -157,10 +145,10 @@
                 <div class="form-group">
                   <label class="col-sm-3 control-label">Sensiblité microphone </label>
                   <div class="col-sm-9">
-                    <input id="ex3" data-slider-id='ex3Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+                    <input id="ex3" name="micro" data-slider-id='ex3Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
                   </div>
                 </div>
-                <button type="button" class=" btn btn-primary pull-right" id="btnConfMat" onclick="enrConfMat()" > Enregistrer</button>
+                <button type="submit" class=" btn-lg btn-primary pull-right" id="btnEnr2"> Enregistrer</button>
 
               </form>
 
