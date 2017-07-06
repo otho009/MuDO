@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
 var bodyParser= require('body-parser');
+var session = require('express-session');
+
 
 app.set('view engine', 'ejs');
 // Permet de fixer le dossier public comme étant le dossier pour les fichiers statics
@@ -10,6 +12,12 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 
+app.use(session({
+  secret: 'seeecret',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false }
+}));
 
   // Page d'enregistrement
     app.get('/', function(req, res) {
@@ -27,8 +35,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
     // personnalisation
     app.post('/parametres', function(req, res){
-       console.log(req.body);
-       res.send("recieved your request!");
+       console.log(req.session);
     });
     // configuration du matériel
     app.post('/parametres2', function(req, res){
