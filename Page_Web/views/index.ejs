@@ -76,7 +76,7 @@
             <button class="btn btn-xs btn-primary active">Off</button>
           </span> Activer/Désactiver le micro</li>
           <li class="list-group-item">
-               <button class="btn btn-xs btn-danger pull-right">Redémarrer</button>
+               <button class="btn btn-xs btn-danger pull-right" onclick="reboot()">Redémarrer</button>
                Redémarrer le système
           </li>
         </ul>
@@ -128,6 +128,12 @@ $(document).ready(function() {
    $(this).find('.btn').toggleClass('active').toggleClass('btn-default').toggleClass('btn-primary');
  });
 });
+function reboot(){
+  var sys = require('sys');
+  var exec = require('child_process').exec;
+  function puts(error, stdout, stderr) { sys.puts(stdout); }
+  exec("reboot", puts);
+}
 
 </script>
 
